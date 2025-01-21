@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.786544436443">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.790779048871">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -33,12 +33,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../images/cbio-logo.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.786544436443" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.790779048871" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.786544436443" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.790779048871" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.786544436443" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.786544436443" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.790779048871" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.790779048871" defer></script>
     <link href="../../../resources/css/katex.css?v=3.6.0" rel="stylesheet">
     <script id="katex-js" data-cfasync="false" src="../../../resources/js/katex.js?v=3.6.0" defer></script>
 
@@ -298,6 +298,16 @@ skin.show_tools_tab=
 skin.show_about_tab=</code></pre>
 </doc-codeblock></div>
 <p><strong>Note:</strong> <code v-pre>skin.show_tools_tab</code> refers to the <code v-pre>Visualize Your Data</code> tab, while <code v-pre>skin.show_data_tab</code> refers to the <code v-pre>Data Sets</code> tab.</p>
+<doc-anchor-target id="show-donate-button">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-donate-button">#</doc-anchor-trigger>
+        <span>Show donate button</span>
+    </h3>
+</doc-anchor-target>
+<p>We kindly ask for your support by enabling the “Donate” button on your portals to help fund our mission. The button will direct users to <a href="https://docs.cbioportal.org/donate/">https://docs.cbioportal.org/donate/</a>, where they can learn more about how the funding is utilized. You can activate it through:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">skin.show_donate_button=true</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="cross-cancer-study-query-default">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#cross-cancer-study-query-default">#</doc-anchor-trigger>
@@ -397,6 +407,22 @@ skin.right_logo=</code></pre>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">skin.hide_download_controls=</code></pre>
 </doc-codeblock></div>
+<doc-anchor-target id="quick-select-buttons">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#quick-select-buttons">#</doc-anchor-trigger>
+        <span>Quick select buttons</span>
+    </h3>
+</doc-anchor-target>
+<p>This feature allows you to generate a Quick Select button on the top of your query page. The button, when clicked on, will automatically select the studies mentioned after the &#x27;#&#x60;.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">skin.quick_select_buttons=</code></pre>
+</doc-codeblock></div>
+<p>The format for the string should be <code v-pre>&lt;Button name&gt;|&lt;Mouse-over text&gt;#study1a,study1b,....</code> where:</p>
+<ul>
+<li><code v-pre>&lt;Button name&gt;</code> will be the label on the button (for e.g. TCGA PanCancer Atlas Studies, Curated set of non-redundant studies)</li>
+<li><code v-pre>&lt;Mouse-over text&gt;</code> will be the text that is displayed when you hover over the button (for e.g. 218 studies that are manually curated including TCGA and non-TCGA studies with no overlapping samples)</li>
+<li><code v-pre>study1a,study1b,....</code> are the study IDs of the loaded studies that should be selected when the button is clicked. (for e.g. acbc_mskcc_2015,acc_tcga_pan_can_atlas_2018)</li>
+</ul>
 <doc-anchor-target id="control-default-setting-for-filtering-of-genes-in-mutation-and-cna-tables-of-patient-view">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#control-default-setting-for-filtering-of-genes-in-mutation-and-cna-tables-of-patient-view">#</doc-anchor-trigger>
@@ -1206,7 +1232,7 @@ enable_study_tags=true|false</code></pre>
                                     <ul class="flex flex-wrap items-center text-sm">
                                     </ul>
                                 </div>
-                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2024. All rights reserved.</p></div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2025. All rights reserved.</p></div>
                             </footer>
                         </div>
                     </div>
