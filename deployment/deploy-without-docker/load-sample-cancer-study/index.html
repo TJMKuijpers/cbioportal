@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.790779048871">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.793372638963">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../images/cbio-logo.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.790779048871" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.793372638963" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.790779048871" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.793372638963" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.790779048871" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.793372638963" data-turbo-eval="false" defer></script>
 
     <link rel="stylesheet" href="/static/custom.css"></link>
 </head>
@@ -102,6 +102,16 @@
                                         </g>
                                     </svg>
                                     <span>Google Group</span>
+                                </a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../donate/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                        <g fill="currentColor">
+                                            <path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/>
+                                        </g>
+                                    </svg>
+                                    <span>Donate</span>
                                 </a>
                             </li>
         
@@ -214,6 +224,16 @@
                                             <span>Google Group</span>
                                         </a>
                                     </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../donate/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                                <g fill="currentColor">
+                                                    <path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"/>
+                                                </g>
+                                            </svg>
+                                            <span>Donate</span>
+                                        </a>
+                                    </li>
             
                                 </ul>
                             </nav>
@@ -282,9 +302,9 @@ like the following to <code v-pre>.bash_profile</code> in your home directory:</
 </doc-anchor-target>
 <p>The sample gene panel has to be imported before gene panel study data can be added to the database.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">cd cbioportal-core/src/main/resources/scripts 
-./importGenePanel.pl --data ../../test/scripts/test_data/study_es_0/data_gene_panel_testpanel1.txt
-./importGenePanel.pl --data ../../test/scripts/test_data/study_es_0/data_gene_panel_testpanel2.txt</code></pre>
+<pre class="language-none"><code v-pre class="language-none">cd cbioportal-core/scripts 
+./importGenePanel.pl --data ../tests/test_data/study_es_0/data_gene_panel_testpanel1.txt
+./importGenePanel.pl --data ../tests/test_data/study_es_0/data_gene_panel_testpanel2.txt</code></pre>
 </doc-codeblock></div>
 <p>After loading gene panels into the database, please restart Tomcat or call the <code v-pre>/api/cache</code> endpoint with a <code v-pre>DELETE</code> http-request
 (see <a href="../../customization/application.properties-reference/#evict-caches-with-the-apicache-endpoint">here</a> for more information)
@@ -299,11 +319,11 @@ so that the validator can retrieve gene panel information from the cBioPortal AP
 <p>First it&#x27;s useful to validate the study <code v-pre>study_es_0</code>, to check if the data is formatted correctly.</p>
 <p>To do so, go to the importer folder:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">cd cbioprtal-core/src/main/scripts/importer</code></pre>
+<pre class="language-none"><code v-pre class="language-none">cd cbioprtal-core/scripts/importer</code></pre>
 </doc-codeblock></div>
 <p>and then run the following command:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">./validateData.py -s ../../../test/scripts/test_data/study_es_0/ -n</code></pre>
+<pre class="language-none"><code v-pre class="language-none">./validateData.py -s ../../tests/test_data/study_es_0/ -n</code></pre>
 </doc-codeblock></div>
 <p>If all goes well, you should see the final output message:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -317,11 +337,11 @@ so that the validator can retrieve gene panel information from the cBioPortal AP
 </doc-anchor-target>
 <p>To import the sample study:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">cd cbioportal-core/src/main/scripts/importer</code></pre>
+<pre class="language-none"><code v-pre class="language-none">cd cbioportal-core/scripts/importer</code></pre>
 </doc-codeblock></div>
 <p>and then run the following command:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">./metaImport.py -s ../../../test/scripts/test_data/study_es_0/ -n -o</code></pre>
+<pre class="language-none"><code v-pre class="language-none">./metaImport.py -s ../../tests/test_data/study_es_0/ -n -o</code></pre>
 </doc-codeblock></div>
 <p>You will see a series of output messages, hopefully ending with a status message like this:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
